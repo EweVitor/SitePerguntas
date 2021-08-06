@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
 from flask.wrappers import Request
 from config import db
-from usuario import Usuario
+from model.usuario import Usuario
+from controlador.usuario import usuario_blueprint
 
-
-TEMPLATE = './template'
+TEMPLATE = './view'
 STATIC = './static'
 
 
-app = Flask(__name__, template_folder=TEMPLATE, static_folder=STATIC)
-
+app = Flask(__name__, static_url_path='', template_folder=TEMPLATE, static_folder=STATIC)
+app.register_blueprint(usuario_blueprint)
 #configurações de db
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./dados.db'
@@ -22,34 +22,11 @@ with app.app_context():
 #configurações de rotas
 @app.route('/')
 def olaMundo():
-    return render_template('cadastro.html') 
+    return render_template('login.html') 
 
 @app.route('/index')
 def index():
     return render_template('index.html')
-
-
-@app.route('/cadastro', methods=["POST"]) 
-def cadastro():
-
-    nome = request.form.get('nome')
-    email = request.form.get('email')
-
-    usuarios = Usuario.query.all()
-    for u in usuarios:
-        if u.email == email:
-            return 'usuario ja existe'
-
-    usuario = Usuario(nome, email) 
-    db.session.add(usuario)
-    db.session.commit()
-        
-    return 'ususario cadastrado'
-
-@app.route('/listaUsuario')    
-def listaUsuario():
-    usuarios = Usuario.query.all()
-    return render_template('listaUsu.html', usuarios = usuarios)
 
 #app.run(host='0.0.0.0' ,port=5000)
 
