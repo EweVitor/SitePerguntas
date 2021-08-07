@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Principal</title>
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -28,114 +30,46 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<style>
-:root{
-  --cor0: rgb(8, 42, 145);
-  --cor1: rgb(7, 61, 221);
-  --cor2: rgb(61, 88, 170);
-  --cor3: rgb(74, 104, 194);
-
-  --cor4: rgb(223, 223, 223);
-}
-
-body{
-
-
-}
-nav{
-  border-bottom: 1px solid rgb(7, 61, 221);
-  color: rgb(31, 31, 31);
-}
-h1{
-  font-family: monospace, sans-serif, Arial;
-  color: rgb(74, 104, 194) ;  
-  filter: drop-shadow(0px 0px 1px black );
-}
-section{
-  padding: 4%;
- 
-}
-.sech1{
-    height: 100vh;
-    padding: 2vw;
-    font-size: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-}
-.secCard{
-  background-color:rgb(74, 104, 194) ;
-}
-.nav-item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-.perfil{
-
- font-size: 30px;
-
-}
-.logo{
- 
-  max-height: 86px;
-  max-width: 86px;
-  width: auto;
-  height: auto;
-}
-</style>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Navbar -->
-  <nav  class="navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <img class="logo" src="img/logo.png" alt="">
-        
+  <!-- Navbar   <img class="logo" src="img/logo.png" alt="">-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="img/logo.png" class="d-inline-block align-top logo" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Pagina Principal <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Destaques</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Esportes</a>
+        </li>
+        <li class="nav-item">
+         <img width="45" src="img/perfil2-0.png" alt="">
+         <span> {{ login }} </span>
       </li>
-      <li class="nav-item ">
-        <a href="" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item  ">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-
-      
-    </ul>
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-    <li class="nav-item">
-      <span class="perfil"  >&#128512;</span>
-      Usuario:  <span> {{ login }} </span>
-    </li>
-   
+      </ul>
+    </div>
   </nav>
  
   <!-- /.navbar -->
  <!-- Section principal 
+  
+   
+-->
     <section class="sech1">
       
-      <h1><strong>Saude.</strong>ORG</h1>
-      <a href="#" class="d-block">{{ login }}</a>
+      <img src="img/logo.png" alt="">
+      
       <hr>
-    </section>-->
+    </section>
 
     <section class="secCard">
       <div class="card-columns">
@@ -144,19 +78,16 @@ section{
           <div class="card-body">
             <h5 class="card-title">Importancia da alimentação saudável</h5>
             <p class="card-text">
-              blablabla
+              Se alimentar de forma saudável e equilibrada é essencial para garantir qualidade de vida.
+               Isso porque, além de fornecer energia e bem-estar geral, através de uma boa alimentação 
+               é possível prevenir e combater doenças, manter o peso corporal saudável e ter um bom
+                desenvolvimento físico.
             </p>
           </div>
         </div>
-        <div class="card p-3">
-          <blockquote class="blockquote mb-0 card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">
-              <small class="text-muted">
-                Alguém famoso em <cite title="Título da fonte">Título da fonte</cite>
-              </small>
-            </footer>
-          </blockquote>
+        <div class="card">
+          <img class="card-img-top" src="img/alimentacao-saudavel.jpg" alt="Imagem de capa do card">
+         
         </div>
         <div class="card">
           <img class="card-img-top" src="img/morangos.jpg" alt="Morangos">
@@ -171,15 +102,9 @@ section{
             <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
           </div>
         </div>
-        <div  class="card bg-light text-black text-center p-3">
-          <blockquote class="blockquote mb-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-            <footer class="blockquote-footer">
-              <small>
-                Alguém famoso em <cite title="Título da fonte">Título da fonte</cite>
-              </small>
-            </footer>
-          </blockquote>
+        <div class="card">
+          <img class="card-img-top" src="img/piramide-alimentar.jpg" alt="Imagem de capa do card">
+          
         </div>
         
         <div class="card text-center">
@@ -225,7 +150,11 @@ section{
    
     
 
-      
+<footer>
+  
+  <strong> © SAUDE.</strong>ORG 
+
+</footer>
 <!-- ./wrapper -->
 
 <!-- jQuery -->

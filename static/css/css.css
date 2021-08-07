@@ -1,0 +1,84 @@
+nav{
+    border-bottom: 1px solid rgb(7, 61, 221);
+    color: rgb(31, 31, 31);
+    position: fixed;
+    width: 100%;
+}
+:root{
+    --cor0: rgb(8, 42, 145);
+    --cor1: rgb(7, 61, 221);
+    --cor2: rgb(61, 88, 170);
+    --cor3: rgb(74, 104, 194);
+  
+    --cor4: rgb(223, 223, 223);
+}
+
+
+.card-title{
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(82, 82, 255);
+}
+h1{
+    font-family: monospace, sans-serif, Arial;
+    color: rgb(74, 104, 194) ;  
+    filter: drop-shadow(0px 0px 1px black );
+}
+section{
+    padding: 4%;
+   
+}
+.sech1{
+    height: 80vh;
+    padding: 2vw;
+    font-size: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(97, 125, 209);
+    background: url(../img/capa.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+  
+}
+.sech1 img{
+    width: 250px;
+    height: 250px;
+    
+    border-radius: 100%;
+    background: white;
+}
+.secCard{
+    background-color:rgb(74, 104, 194) ;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.perfil{
+  
+   font-size: 30px;
+  
+}
+.logo{
+   
+    max-height: 86px;
+    max-width: 86px;
+    width: auto;
+    height: auto;
+    
+}
+footer{
+    background-color: white;
+    color: rgb(60, 60, 223);
+    text-align: center;
+    padding: 20px;
+
+}

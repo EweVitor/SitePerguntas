@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request,  Blueprint
 from flask.wrappers import Request
+from sqlalchemy.sql.schema import Table
 from config import db
 from model.usuario import Usuario   
 TEMPLATE = './view'
@@ -22,6 +23,7 @@ def cadastro():
     usuario = Usuario(nome, email) 
     db.session.add(usuario)
     db.session.commit()
+    
     
     login = usuario
     return render_template('index.html', login = login)
