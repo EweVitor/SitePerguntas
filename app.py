@@ -22,12 +22,12 @@ with app.app_context():
 #configurações de rotas
 @app.route('/')
 def olaMundo():
-    return render_template('login.html') 
+    return render_template('cadastrar.html')    
 
 @app.route('/index')
 def index():
     return render_template('index.html')
 
-#app.run(host='0.0.0.0' ,port=5000)
+app.run(host='0.0.0.0' ,port=5000)
 
 
