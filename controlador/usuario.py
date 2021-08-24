@@ -1,3 +1,4 @@
+from os import name
 from flask import Flask, render_template, request,  Blueprint
 from flask.wrappers import Request
 from sqlalchemy.sql.schema import Table
@@ -28,7 +29,16 @@ def cadastro():
     login = usuario
     return render_template('index.html', login = login)
 
-@usuario_blueprint.route('/listaUsuario')    
+@usuario_blueprint.route('/excluirUser', methods=["GET"])
+def excluirUser():
+    id = request.form.get('id')
+    usuarios =  Usuario.query.filter_by(id=id).first()
+    db.session.delete(usuarios)
+    db.session.commit()
+    return 'usuario exluido'
+   
+
+@usuario_blueprint.route('/listaUsuario')
 def listaUsuario():
     usuarios = Usuario.query.all()
     return render_template('listaUsu.html', usuarios = usuarios)

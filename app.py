@@ -24,10 +24,10 @@ with app.app_context():
 def olaMundo():
     return render_template('cadastrar.html')    
 
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template('index.html')
 
-#app.run(host='0.0.0.0' ,port=5000)
+app.run(host='0.0.0.0' ,port=5000)
 
-
+    

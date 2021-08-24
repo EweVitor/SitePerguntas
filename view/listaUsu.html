@@ -36,6 +36,7 @@
                     <tr>
                       <th>Nome</th>
                       <th>email</th>
+                      <th>ID</th>
                      
                     </tr>
                     </thead>
@@ -50,12 +51,19 @@
                             
                             <td>{{ usuario.nome }}</td>
                             <td>{{ usuario.email }}</td>
+                            <td> {{ usuario.id }} </td>
                         
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
-      
+            <!-- Excluir user -->
+            <form action="/excluirUser" method="GET">
+              <label for="id">Digite o ID</label>
+              <input type="number" name="id" id="id">
+              <input type="submit" value="Exculir">
+            </form>
+            
  </section>
  <script src="../../plugins/jquery/jquery.min.js"></script>
  <!-- Bootstrap 4 -->
