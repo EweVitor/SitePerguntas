@@ -24,7 +24,7 @@ with app.app_context():
 def olaMundo():
     return render_template('cadastrar.html')    
 
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
 
