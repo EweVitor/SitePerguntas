@@ -13,9 +13,7 @@ nav{
     --cor4: rgb(223, 223, 223);
 }
 
-.cadastroStyle{
 
-}
 .card-title{
     font-weight: bolder;
     font-size: 20px;
@@ -107,6 +105,8 @@ footer{
     text-align: center;
     font-size: 30px;
     padding: 20px;
+    border-top: 2px solid;
+    border-top-color: blue;
 
 }
 .far{

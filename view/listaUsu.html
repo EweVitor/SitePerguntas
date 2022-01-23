@@ -20,7 +20,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body style=" margin: auto; background-color: rgb(172, 188, 238);">
+<body style=" margin: auto; background-color: rgb(172, 188, 238);" c>
    <!-- Navbar   <img class="logo" src="img/logo.png" alt="">-->
     {% include 'componentes/menu.html' %}
     <section class="content-header">
@@ -58,7 +58,7 @@
                 </tbody>
             </table>
             <!-- Excluir user -->
-            <form action="/excluirUser" method="GET">
+            <form action="/excluirUser" method="POST">
               <label for="id">Digite o ID</label>
               <input type="number" name="id" id="id">
               <input type="submit" value="Exculir">
