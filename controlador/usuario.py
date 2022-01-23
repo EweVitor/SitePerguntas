@@ -50,3 +50,4 @@ def destaques():
     "https://www.youtube.com/embed/17tq_ftcw6U"
     ]
     return render_template('destaques.html', Lista = Lista)
+    

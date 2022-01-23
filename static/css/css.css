@@ -112,8 +112,10 @@ footer{
 .video{
     width:560;
     height:315;
-    margin: 10px;
+    margin: auto;
     display: contents;
+    align-items: center;
+    justify-content: center;
 
 }
 .destaques{
