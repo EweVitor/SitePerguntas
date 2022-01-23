@@ -109,6 +109,23 @@ footer{
     border-top-color: blue;
 
 }
+.video{
+    width:560;
+    height:315;
+    margin: 10px;
+    display: contents;
+
+}
+.destaques{
+    background: rgb(74, 104, 194);
+    color: white;
+    border-radius: 20px 0px 20px 0;
+    align-items: center;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .far{
     font-size: 30px;
 

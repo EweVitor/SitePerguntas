@@ -39,11 +39,15 @@
   {% include 'componentes/menu.html' %}
 
     <section class="">
+        <h1 class="destaques">Destaques</h1>
         <h2>Abaixo temos alguns vídeos mostrando a Importancia hábito, aprenda a controlar sua mente!</h2>
-        {% for item in Lista:%}
-            <iframe width="560" height="315" src="{{ item }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        {%endfor%}
+        
+            {% for item in Lista:%}
+            <div class="video">
+                <iframe  src="{{ item }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {%endfor%}
+        
     </section>
   <!-- Main Sidebar Container -->
   
